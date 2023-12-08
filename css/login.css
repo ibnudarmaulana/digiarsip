@@ -1,0 +1,63 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.kotak-login {
+  background: #fff;
+  padding: 20px;
+  padding-top: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  width: 300px;
+  margin-top: -50px;
+}
+
+.kotak-login h3 {
+  text-align: center;
+  color: #333;
+}
+.kotak-login p {
+  text-align: center;
+  color: #333;
+  font-size: 13px;
+  margin-top: -15px;
+}
+
+.kotak-login form {
+  display: flex;
+  flex-direction: column;
+}
+
+.kotak-login input {
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.kotak-login input[type="submit"] {
+  background-color: #007BFF;
+  color: #fff;
+  cursor: pointer;
+}
+
+.kotak-login input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.kotak-login a {
+  text-align: center;
+  text-decoration: none;
+  color: #007BFF;
+}
+
+.kotak-login a:hover {
+  text-decoration: underline;
+}
