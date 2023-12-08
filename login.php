@@ -19,10 +19,25 @@ if(isset($_SESSION['login'])){
         <p>Sistem Informasi Kearsipan Surat</p>
         <form action="" method="post">
             <input type="text" placeholder="Username" name="username" autocomplete="off" required>
-            <input type="password" placeholder="Password" name="password" required>
+            <input type="password" placeholder="Password" name="password" id="password" required>
+            <div class="lihat-password">
+                <input type="checkbox" id="lihat_password" onclick="lihatPassword()">
+                <label for="lihat_password">Lihat Password</label>
+            </div>
             <input type="submit" name="login" value="Masuk">
-            <a style="text-align: center;" href="registrasi.php">Daftar Akun</a>
+            <a href="registrasi.php">Daftar Akun</a>
         </form>
     </div>
+
+    <script>
+    let password = document.getElementById("password");
+    function lihatPassword() {
+        if (password.type == "password") {
+        password.type = "text";
+        }else{
+        password.type = "password";
+        }
+    }
+</script>
 </body>
 </html>
