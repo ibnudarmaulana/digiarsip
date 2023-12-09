@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 08, 2023 at 06:18 PM
+-- Generation Time: Dec 09, 2023 at 11:48 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -33,15 +33,6 @@ CREATE TABLE `pengguna` (
   `username` varchar(30) NOT NULL,
   `password` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `pengguna`
---
-
-INSERT INTO `pengguna` (`id`, `nama`, `username`, `password`) VALUES
-(1, 'kecamatan pedes', 'pedes', '$2y$10$WjcmabJeNYjfMZHq6GdRQuZv10uGXxZEXqhjeVaW1xY6SLnQctPNe'),
-(2, 'ibnu darma', 'ibnu', '$2y$10$c8fA08esiNdtQu3DX807quoP5LzwDrr.q5yK8XicrBS.43hnaAIp2'),
-(3, 'azis', 'azis', '$2y$10$6.F4bq7QkzIGb5VbeZAkNei56MrU/wEopPJsyGYUG1g0pXkTZbWUK');
 
 -- --------------------------------------------------------
 
@@ -91,15 +82,13 @@ ALTER TABLE `pengguna`
 -- Indexes for table `surat_keluar`
 --
 ALTER TABLE `surat_keluar`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `pengguna_id` (`pengguna_id`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `surat_masuk`
 --
 ALTER TABLE `surat_masuk`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `pengguna_id` (`pengguna_id`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -109,7 +98,7 @@ ALTER TABLE `surat_masuk`
 -- AUTO_INCREMENT for table `pengguna`
 --
 ALTER TABLE `pengguna`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `surat_keluar`

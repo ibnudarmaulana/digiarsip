@@ -84,6 +84,20 @@ th {
 .tombol-tambah:hover {
     background-color: #0056b3;
 }
+.tombol-kembali {
+    background-color: #ff0015;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-top: -20px;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+
+.tombol-kembali:hover {
+    background-color: #b3001e;
+}
 
 .form-container {
     width: 50%;

@@ -48,6 +48,7 @@ if(isset($_POST['simpan'])){
         <a href="logout.php">Logout</a>
     </div>
     <div class="konten">
+        <a href="surat_masuk.php" class="tombol-kembali">Kembali</a>
     <div class="form-container">
             <form action="" method="post" enctype="multipart/form-data">
                 <label for="nomor_surat">Nomor Surat</label>
