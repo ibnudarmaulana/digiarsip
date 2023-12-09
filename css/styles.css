@@ -41,7 +41,7 @@ h1 {
     color: #333;
 }
 
-.container {
+.tabel {
     margin: 20px;
     background-color: #fff;
     padding: 20px;
@@ -71,7 +71,7 @@ th {
     color: #fff;
 }
 
-.add-button {
+.tombol-tambah {
     background-color: #007BFF;
     color: #fff;
     padding: 10px 20px;
@@ -81,7 +81,7 @@ th {
     margin-bottom: 10px;
 }
 
-.add-button:hover {
+.tombol-tambah:hover {
     background-color: #0056b3;
 }
 

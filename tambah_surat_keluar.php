@@ -9,7 +9,7 @@ if(!isset($_SESSION['login'])){
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Dashboard</title>
+    <title>Tambah Surat Keluar</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>

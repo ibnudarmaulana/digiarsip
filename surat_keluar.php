@@ -9,7 +9,7 @@ if(!isset($_SESSION['login'])){
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Dashboard</title>
+    <title>Surat Keluar</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -23,8 +23,8 @@ if(!isset($_SESSION['login'])){
     <div class="header">
         <h1 style="text-align: center;">Surat Keluar</h1>
     </div>
-    <div class="container">
-        <a href="tambah_surat_keluar.php"><button class="add-button">Tambah Surat</button></a>
+    <div class="tabel">
+        <a href="tambah_surat_keluar.php"><button class="tombol-tambah">Tambah Surat</button></a>
         <table>
             <thead>
                 <tr>
