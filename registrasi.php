@@ -13,16 +13,19 @@ if(isset($_POST['registrasi'])){
   $nama = htmlspecialchars($_POST['nama']);
   $username = htmlspecialchars($_POST['username']);
   $password = htmlspecialchars($_POST['password']);
-  $hashed_password = password_hash($password, PASSWORD_DEFAULT);
-
-  // Query Memasukan Data ke dalam Database
-  $query = mysqli_query($koneksi, "INSERT INTO pengguna VALUES ('','$nama','$username','$hashed_password')");
-
-  // Memasang sesi registrasi
-  // $_SESSION['registrasi'] = "Registrasi Berhasil";
-
-  // Mengalihkan ke Halaman Login
-  return header('location: ../login.php');
+  $konfirmasi_password = htmlspecialchars($_POST['konfirmasi_password']);
+  // Mengecek Kesamaan Password
+  if($password == $konfirmasi_password){
+    $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+  
+    // Query Memasukan Data ke dalam Database
+    $query = mysqli_query($koneksi, "INSERT INTO pengguna VALUES ('','$nama','$username','$hashed_password')");
+  
+    // Mengalihkan ke Halaman Login
+    return header('location: login.php');
+  }else{
+    echo "<script>alert('Konfirmasi Password Tidak Sama')</script>";
+  }
 
 }
 ?>
@@ -43,6 +46,7 @@ if(isset($_POST['registrasi'])){
             <input type="text" placeholder="Nama" name="nama" autocomplete="off" required>
             <input type="text" placeholder="Username" name="username" autocomplete="off" required>
             <input type="password" placeholder="Password" name="password" required>
+            <input type="password" placeholder="Konfirmasi Password" name="konfirmasi_password" required>
             <input type="submit" name="registrasi" value="Registrasi">
             <a style="text-align: center;" href="login.php">Sudah Punya Akun</a>
         </form>
